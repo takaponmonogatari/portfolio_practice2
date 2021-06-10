@@ -1,0 +1,53 @@
+<div class='container'>
+
+<h1>高校詳細</h1>
+<div class="row">
+  <!--<div class="sample">-->
+  <!--<div class="col-md-4  offset-md-4  mt-5">-->
+  <!-- <#%= attachment_image_tag(@school, :image, fallback: "no_image.jpg") %>-->
+  <!--</div>-->
+  <!--</div>-->
+
+<table class="col-md-6 offset-md-2  mt-5">
+
+  <tbody>
+    <tr class="form-group">
+      <th>学校名</th>
+      <td><%= @school.name %></td>
+    </tr>
+    <tr class="form-group">
+      <th>学校名カナ</th>
+      <td><%= @school.name_kana %></td>
+    </tr>
+    <tr class="form-group">
+      <th>郵便番号</th>
+      <td><%= @school.postal_code %></td>
+    </tr>
+
+    <tr class="form-group">
+      <th>住所</th>
+      <td><%= @school.addres %></td>
+    </tr>
+    <tr class="form-group">
+      <th>学校ホームページ</th>
+      <td><%= @school.url %></td>
+    </tr>
+    <tr class="form-group">
+      <th>グーグルへのリンク</th>
+      <td><%= @school.google %></td>
+    </tr>
+    <tr class="form-group">
+      <th>Yahoo!乗換案内へのリンク</th>
+      <td><%= @school.yahoo %></td>
+    </tr>
+  </tbody>
+
+
+</table>
+ <div class='container mt-5'>
+    <div class='row'>
+ <div class="text-center mx-auto"><%= link_to '編集する', edit_admins_school_path(@school), class: "btn btn-success", style: "width: 150px" %></div>
+</div>
+</div>
+</div>
+</div>

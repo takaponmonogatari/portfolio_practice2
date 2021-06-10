@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-2  mx-auto"><h2>高校一覧</h2></div>
+  <div class="col-sm-1  mx-auto"><%= link_to new_admins_school_path do %><button type="button" class="btn btn-light rounded-circle p-0" style="width:3rem;height:3rem;">＋</button><% end %></div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-7 mx-auto">
+<table class='table table-hover table-inverse'>
+  <thead class="bg-light">
+    <tr>
+      <th>高校ID</th>
+      <th>学校名</th>
+      <th>住所</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @schools.each do |school| %>
+      <tr>
+        <td><%= school.id %></td>
+        <td><%= link_to school.name,admins_school_path(school), class: "text-dark text-decoration-none border-bottom border-dark" %></td>
+        <td><%= school.addres %></td>
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="row">
+</div>

@@ -1,0 +1,56 @@
+
+<div class="row">
+  <div class="col-md-2 offset-md-2"><h2>高校情報登録</h2></div>
+</div>
+<div class="container">
+  <div class="row  mt-3">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+   <%= form_with model:@school,url:admins_schools_path, local:true do |f| %>
+<table>
+
+  <!--<tr class="form-group">-->
+  <!--  <td><#%= f.label :学校画像 %></td>-->
+  <!--  <td><#%= f.attachment_field :image, class: "ml-3" %></td>-->
+  <!--</tr>-->
+  <tr class="form-group">
+    <td><%= f.label :学校区分 %></td>
+    <td><%= f.text_field :school_division, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :所在都道府県 %></td>
+    <td><%= f.text_field :prefecture, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :学校名 %></td>
+    <td><%= f.text_field :name, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :学校名カナ %></td>
+    <td><%= f.text_field :name_kana, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :郵便番号 %></td>
+    <td><%= f.text_field :postal_code, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :住所 %></td>
+    <td><%= f.text_area :addres, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :ホームページリンク %></td>
+    <td><%= f.text_area :url, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group">
+    <td><%= f.label :グーグルマップリンク %></td>
+    <td><%= f.text_area :google, class: 'form-control name ml-3' %></td>
+  </tr>
+  <tr class="form-group mb-3">
+    <td><%= f.label :ヤフー電車乗り換えリンク %></td>
+    <td><%= f.text_area :yahoo, class: 'form-control description ml-3'  %></td>
+  </tr>
+</table>
+
+  <div class="text-center mx-auto  mt-3">
+    <%= f.submit "新規登録", class: "btn btn-success", style: "width: 150px" %>
+  </div>
+<% end %>
